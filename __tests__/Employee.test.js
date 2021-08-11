@@ -7,6 +7,7 @@ describe("Employee", () => {
         expect("name" in testEmployee).toEqual(true); 
         expect("id" in testEmployee).toEqual(true); 
         expect("email" in testEmployee).toEqual(true); 
+        expect("role" in testEmployee).toEqual(true); 
     });
 
     it("should return the correct name when getName() is called", () =>{
