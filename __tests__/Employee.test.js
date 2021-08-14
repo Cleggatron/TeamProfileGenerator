@@ -1,7 +1,7 @@
 const Employee = require("../lib/Employee.js")
 
 describe("Employee", () => {
-    it("should create a new object containing name, id, and email properties when called", () =>{
+    it("should create a new object containing name, id, email, and role properties when called", () =>{
         const testEmployee = new Employee("John", 4, "John@testemail.com")
 
         expect("name" in testEmployee).toEqual(true); 

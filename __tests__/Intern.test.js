@@ -1,7 +1,7 @@
 const Intern = require("../lib/Intern.js");
 
 describe("intern", () => {
-    it("should create a new object containing name, id, and email properties when called", () =>{
+    it("should create a new object containing name, id, email, role, and school properties when called", () =>{
         const testIntern = new Intern("John", 4, "John@testemail.com", "testSchool");
 
         expect("name" in testIntern).toEqual(true); 

@@ -1,7 +1,7 @@
 const Manager = require("../lib/Manager.js");
 
 describe("intern", () => {
-    it("should create a new object containing name, id, and email properties when called", () =>{
+    it("should create a new object containing name, id, email, role, and officeNumber properties when called", () =>{
         const testManager = new Manager("John", 4, "John@testemail.com", "1");
 
         expect("name" in testManager).toEqual(true); 
