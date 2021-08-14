@@ -1,7 +1,7 @@
 const Engineer = require("../lib/Engineer.js");
 
 describe("Engineer", () =>{
-    it("should create a new object containing name, id, email, and guthub properties when called", () =>{
+    it("should create a new object containing name, id, email, role, and github properties when called", () =>{
         const testEngineer = new Engineer("John", 4, "John@testemail.com", "johnGithub");
 
         expect("name" in testEngineer).toEqual(true); 
