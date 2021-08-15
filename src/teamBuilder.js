@@ -1,13 +1,22 @@
 //Import our dependencies
+const fs = require("fs");
+const util = require("util");
 const inquirer = require("inquirer");
-const Engineer = require("../lib/Engineer.js")
+const Engineer = require("../lib/Engineer.js");
 const Manager = require("../lib/Manager.js");
 const Intern = require("../lib/Intern.js");
+const generateHTML = require("./generateHTML.js");
+
+const writeFileAsync = util.promisify(fs.writeFile);
 
 //Will store our team members as we build them
 class teamBuilder {
     constructor() {
         this.teamMembers = [];
+    }
+
+    buildTeam () {
+        this.managerDetails();
     }
 
     managerDetails() {
@@ -51,7 +60,7 @@ class teamBuilder {
             if(val.choice){
                 this.chooseEmployee()
             } else {
-                this.createMarkdown()
+                this.createHTMLFile()
             }
         })
 
@@ -79,7 +88,7 @@ class teamBuilder {
                     break;
 
                 default: 
-                    this.createMarkdown();
+                    this.createHTMLFile();
             }
 
         })
@@ -146,13 +155,12 @@ class teamBuilder {
 
     }
 
-    createMarkdown() {
-        console.log(this.teamMembers)
+    createHTMLFile() {
+        writeFileAsync("./dist/index.html", generateHTML(this.teamMembers))
+        .then(() => console.log("File sucessfully created!"))
+        .catch((err) => console.error(err));
     }
 
 }
 
-
-const newTeam = new teamBuilder
-
-newTeam.managerDetails()
+module.exports = teamBuilder;
