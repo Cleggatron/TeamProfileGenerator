@@ -4,8 +4,9 @@
 }
 
 a{
-    color: black;
-    font-style: normal;
+    color: blue;
+    font-style: italic;
+    text-decoration: none;
 }
 
 h1{
@@ -44,4 +45,6 @@ header{
     border: 1px solid grey;
     padding: 2rem;
     margin: 2rem;
+    width: 25%;
+    background-color: rgb(165, 167, 170);
 }
