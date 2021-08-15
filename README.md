@@ -22,7 +22,7 @@
 
   ## Usage
 
-  ![File In Action](./assets/ReadmeScreenshot.png)
+  ![File In Action](assets/ReadmeScreenshot.PNG)
 
   [Video Link](https://drive.google.com/file/d/1UctRW8b6SvB7a7QpCAsNYK4_OI8P4Kn_/view)
 
