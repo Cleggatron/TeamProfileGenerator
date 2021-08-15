@@ -1,2 +1,7 @@
-const markdownGenerator = require("./src/markdownGenerator.js");
-const teamInfo = require("./src/teamInfo.js");
+const teamBuilder = require("./src/teamBuilder.js");
+
+//initialise our new team
+const team = new teamBuilder;
+
+//start our team building.
+team.buildTeam();
