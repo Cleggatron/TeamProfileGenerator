@@ -3,11 +3,13 @@ const internTemplate = (internData) => {
 
     const template = `
     <div class="card">
-      <h2 class="name header">${name}</h2>
-      <h3 class="role header">${role}</h3>
-      <p class="details">Employee ID: ${id}</p>
-      <p class="details">Email: <a href="mailto:">${email}</a></p>
-      <p class="details">School: ${school}</p>
+        <header>
+        	<h2 class="name header">${name}</h2>
+            <h3 class="role header">${role}</h3>
+        </header>
+        <p class="details">Employee ID: ${id}</p>
+        <p class="details">Email: <a href="mailto:">${email}</a></p>
+        <p class="details">School: ${school}</p>
     </div>`
 
     return template;
@@ -18,11 +20,13 @@ const engineerTemplate = (engineerData) => {
 
     const template = `
     <div class="card">
-      <h2 class="name header">${name}</h2>
-      <h3 class="role header">${role}</h3>
-      <p class="details">Employee ID: ${id}</p>
-      <p class="details">Email: <a href="mailto:">${email}</a></p>
-      <p class="details">Github: <a href="https://github.com/${github}" target="_blank">${github}</a></p>
+        <header>
+            <h2 class="name header">${name}</h2>
+            <h3 class="role header">${role}</h3>
+        </header>
+        <p class="details">Employee ID: ${id}</p>
+        <p class="details">Email: <a href="mailto:">${email}</a></p>
+        <p class="details">Github: <a href="https://github.com/${github}" target="_blank">${github}</a></p>
     </div>`
 
     return template;
@@ -33,11 +37,13 @@ const managerTemplate = (managerData) => {
 
     const template = `
     <div class="card">
-      <h2 class="name header">${name}</h2>
-      <h3 class="role header">${role}</h3>
-      <p class="details">Employee ID: ${id}</p>
-      <p class="details">Email: <a href="mailto:">${email}</a></p>
-      <p class="details">Office Number: ${officeNumber}</p>
+        <header>
+            <h2 class="name header">${name}</h2>
+            <h3 class="role header">${role}</h3>
+        </header>
+        <p class="details">Employee ID: ${id}</p>
+        <p class="details">Email: <a href="mailto:">${email}</a></p>
+        <p class="details">Office Number: ${officeNumber}</p>
     </div>`
 
     return template;
